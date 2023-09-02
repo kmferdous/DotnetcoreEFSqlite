@@ -11,8 +11,6 @@ namespace Transactions.Application.Requests
     {
         public string TransactionId { get; set; }
 
-        public DateTime TransactionDate { get; set; }
-
         public TransactionTypeEnum TransactionType { get; set; }
 
         public TransactionStatusEnum TransactionStatus { get; set; }
