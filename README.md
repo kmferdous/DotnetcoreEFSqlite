@@ -23,6 +23,7 @@
         <li><a href="#technologies">Technologies</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#api-endpoints">Api Endpoints</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -69,7 +70,7 @@ There are 4 layers
 
     This is the endpoint of this software through which it serves the world.
 
-![Design diagram](design.png)
+![Design diagram](diagram.png)
 
 There is a Api for storing and retrieving transactions data. For storing transaction details here considered
 * TransactionId
@@ -82,6 +83,24 @@ There is a Api for storing and retrieving transactions data. For storing transac
 * BBAN (Basic/domestic bank account number)
 
 
+Currency
+    {
+        USD = 1,
+        SAR = 2
+    }
+
+  TransactionStatus
+    {
+        Completed = 1,
+        Failed = 2,
+        Cancelled = 3
+    }
+
+TransactionType
+    {
+        Credit = 1,
+        Debit = 2
+    }
 
 ### Transaction Management
 
@@ -146,6 +165,20 @@ _vscode_ or _visual studio_ IDE is needed for this project. For vscode, _dotnet 
     ```sh
       dotnet run
     ```
+
+### Api Endpoints
+After running the project all the Api endpoints can be visible though this link 
+http://localhost:5242/swagger/index.html
+
+Route for Transaction : `/api/transactions`
+
+    /api/transactions
+    /api/transactions/{id}
+    /api/transactions/transactionId={transactionId}
+
+Route for Report : `/api/reports`
+
+    /api/reports/transactions/sumUpTransactions
 
 ## Roadmap
 - [x] IoC
