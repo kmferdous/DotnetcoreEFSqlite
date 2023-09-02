@@ -16,6 +16,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#technologies">Technologies</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -44,6 +45,45 @@ Task is to create a micro-service that handles financial transactions. The syste
 <!-- GETTING STARTED -->
 ## Getting Started
 
+### System Design & Scope
+
+There is Api for storing and retrieving transactions data. For storing transaction details we consider 
+* TransactionId
+* TransactionDate
+* TransactionType
+* TransactionStatus
+* Currency
+* Amount
+* IBAN (International bank account number)
+* BBAN (Basic/domestic bank account number)
+
+
+### Transaction Management
+
+Transactions.Api is the WebApi project which exposes the api endpoint to interact with this microservice.
+
+* There is a contoller name TransactionController for transaction management. 
+
+  Path is `\src\Transactions.Api\Controllers`. 
+
+* There is a basic currency conversion logic implement in Transactions.Domain library project. The method is defined in CurrencyKnowledgeBase class.
+
+  Path is `\src\Transactions.Domain\Logics`.
+
+### Reporting System
+
+There is a contoller name ReportController for report data generation. 
+
+Path is `\src\Transactions.Api\Controllers`.
+
+### Data Persistence
+For data persistency here used Entity Framework core and followed repository pattern to access data from database. Inside of the Transactions.Infrastructure library project there are the repositories.
+
+Path is `E:\github\DotnetcoreEFSqlite\DotnetcoreEFSqlite\src\Transactions.Infrastructure\Repositories`.
+
+
+### Technologies
+
 This Restful webapi project is built on C# using asp.net core and Entity framework core.
 
 * Language: C#
@@ -65,8 +105,6 @@ _vscode_ or _visual studio_ IDE is needed for this project. For vscode, _dotnet 
 
 ### Installation
 
-
-
 1. Clone the repo
    ```sh
    git clone https://github.com/kmferdous/DotnetcoreEFSqlite.git
@@ -83,17 +121,6 @@ _vscode_ or _visual studio_ IDE is needed for this project. For vscode, _dotnet 
     ```sh
       dotnet run
     ```
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTACT -->
 ## Contact
