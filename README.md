@@ -16,12 +16,16 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#system-design">System Design</a></li>
+        <li><a href="#transaction-management">Transaction Management</a></li>
+        <li><a href="#reporting-system">Reporting System</a></li>
+        <li><a href="#data-persistence">Data Persistence</a></li>
         <li><a href="#technologies">Technologies</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -45,9 +49,11 @@ Task is to create a micro-service that handles financial transactions. The syste
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### System Design & Scope
+### System Design
 
-There is Api for storing and retrieving transactions data. For storing transaction details we consider 
+![Design diagram](design.png)
+
+There is a Api for storing and retrieving transactions data. For storing transaction details here considered
 * TransactionId
 * TransactionDate
 * TransactionType
@@ -56,6 +62,7 @@ There is Api for storing and retrieving transactions data. For storing transacti
 * Amount
 * IBAN (International bank account number)
 * BBAN (Basic/domestic bank account number)
+
 
 
 ### Transaction Management
@@ -121,6 +128,16 @@ _vscode_ or _visual studio_ IDE is needed for this project. For vscode, _dotnet 
     ```sh
       dotnet run
     ```
+
+## Roadmap
+- [x] IoC
+- [x] Global Error Handle
+- [x] Auto Database migration
+- [x] Unit Test (partially done)
+- [ ] Add Log
+- [ ] Add Fluent validation
+- [ ] Enrich response model
+
 
 <!-- CONTACT -->
 ## Contact
