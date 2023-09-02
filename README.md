@@ -25,7 +25,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Roadmap</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -153,6 +153,7 @@ _vscode_ or _visual studio_ IDE is needed for this project. For vscode, _dotnet 
 - [x] Auto Database migration
 - [x] Unit Test (partially done)
 - [ ] Add Log
+- [ ] Add alert
 - [ ] Add Fluent validation
 - [ ] Enrich response model
 
