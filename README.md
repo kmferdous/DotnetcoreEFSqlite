@@ -50,6 +50,24 @@ Task is to create a micro-service that handles financial transactions. The syste
 ## Getting Started
 
 ### System Design
+This project is built on following Onion Achitecture which is one of the most popular clean architectures in software development.
+There are 4 layers
+
+1. Domain
+  
+    This layer consists of core business logic and entities. It is not dependant on any other layer.
+
+2. Infrastructure
+
+    This layer consists of Repositories, dbcontext, Data IO operations, etc. Database access related tasks are implemented here.
+
+3. Application
+
+    This is the service layer which connects with API (presentation) and Infrastructure layer. Besides error handling, mapper, System logics, response are defined here.
+
+4. Web Api
+
+    This is the endpoint of this software through which it serves the world.
 
 ![Design diagram](design.png)
 
